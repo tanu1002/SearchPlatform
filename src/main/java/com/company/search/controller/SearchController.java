@@ -6,13 +6,17 @@ import com.company.search.repository.ItemsRepository;
 import com.company.search.service.SearchService;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;
 
 @RestController
 @SpringBootApplication(scanBasePackages = {"com.company.search"})
+@EnableJpaRepositories(basePackages = {"com.company.search.repository"})
+@EntityScan(basePackages = "com.company.search.database")
 public class SearchController {
 
     @Resource
