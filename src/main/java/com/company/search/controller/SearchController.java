@@ -14,9 +14,6 @@ import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 @RestController
-@SpringBootApplication(scanBasePackages = {"com.company.search"})
-@EnableJpaRepositories(basePackages = {"com.company.search.repository"})
-@EntityScan(basePackages = "com.company.search.database")
 public class SearchController {
 
     @Resource
